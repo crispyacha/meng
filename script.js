@@ -8,6 +8,7 @@ const retakeBtn = document.getElementById('retake');
 const frame1Btn = document.getElementById('frame1Btn');
 const frame2Btn = document.getElementById('frame2Btn');
 const frame3Btn = document.getElementById('frame3Btn');
+const frame4Btn = document.getElementById('frame4Btn');
 
 
 // Start video stream
@@ -29,6 +30,10 @@ frame2Btn.addEventListener('click', () => {
 
 frame3Btn.addEventListener('click', () => {
   frame.src = 'https://raw.githubusercontent.com/crispyacha/photobooth/main/2-removebg-preview.png'; // Replace with your second frame image URL
+});
+
+frame4Btn.addEventListener('click', () => {
+  frame.src = 'http://raw.githubusercontent.com/crispyacha/photobooth/main/0987654321.png'; // Replace with your second frame image URL
 });
 
 // Capture photo
