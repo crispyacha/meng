@@ -9,7 +9,11 @@ const frame1Btn = document.getElementById('frame1Btn');
 const frame2Btn = document.getElementById('frame2Btn');
 const frame3Btn = document.getElementById('frame3Btn');
 const frame4Btn = document.getElementById('frame4Btn');
+const frame5Btn = document.getElementById('frame5Btn')
 
+// Hide download and retake buttons at start
+downloadBtn.style.display = 'none';
+retakeBtn.style.display = 'none';
 
 // Start video stream
 navigator.mediaDevices.getUserMedia({ video: true })
@@ -36,6 +40,10 @@ frame4Btn.addEventListener('click', () => {
   frame.src = 'http://raw.githubusercontent.com/crispyacha/photobooth/main/0987654321.png'; // Replace with your second frame image URL
 });
 
+frame5Btn.addEventListener('click', () => {
+  frame.src = 'https://raw.githubusercontent.com/crispyacha/photobooth/main/10101.png'; // Replace with your second frame image URL
+});
+
 // Capture photo
 snapBtn.addEventListener('click', () => {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -56,6 +64,7 @@ snapBtn.addEventListener('click', () => {
     // frame.style.display = 'none'; // Remove or comment out this line
     snapBtn.style.display = 'none';
     retakeBtn.style.display = 'inline-block';
+    downloadBtn.style.display = 'inline-block'; // <-- Add this line
   };
   frameImg.src = frame.src;
 });
